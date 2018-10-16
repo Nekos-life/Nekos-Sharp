@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>LoliServicesSharp</id>
+    <id>Nekos-Sharp</id>
     <version>1.0.0</version>
     <authors>xXBuilderBXx</authors>
-    <licenseUrl>https://github.com/Nekos-life/Nekos.Sharp/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/Nekos-life/Nekos.Sharp</projectUrl>
+    <licenseUrl>https://github.com/Nekos-life/Nekos-Sharp/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Nekos-life/Nekos-Sharp</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A C# lib for getting cute nekos, waifus and Foxes from nekos.life</description>
     <releaseNotes>First release with all endpoints and descriptions</releaseNotes>
