@@ -18,10 +18,13 @@ Request Req = await NekoClient.Image.Neko();
 Request Req = await NekoClient.Nsfw.Neko();
 ```
 
-Misc endpoints: 3
-Action endpoints: 8
-Image endpoints: 9
-Nsfw endpoints: 35 mmmhhh
+`Misc endpoints: 3`
+
+`Action endpoints: 8`
+
+`Image endpoints: 9`
+
+`Nsfw endpoints: 35 mmmhhh`
 
 
 # Request
