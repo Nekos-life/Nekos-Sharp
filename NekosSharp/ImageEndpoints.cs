@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace NekosSharp
 {
+    /// <summary>
+    /// All the weeb images you would ever need
+    /// </summary>
     public class ImageEndpoints
     {
         public ImageEndpoints(NekosClient client)

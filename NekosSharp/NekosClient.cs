@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace NekosSharp
 {
+    /// <summary>
+    /// Instance of nekos.life for getting cute waifus, nekos, foxes, cat and other images :3
+    /// </summary>
     public class NekosClient
     {
-        /// <summary>
-        /// New instance of the NekosClient for getting cute neko pics :3
-        /// </summary>
         public NekosClient(string BotName)
         {
             Client.DefaultRequestHeaders.Add("User-Agent", $"NekosSharp | {BotName}");
@@ -58,6 +58,9 @@ namespace NekosSharp
     {
         None, Info, Debug
     }
+    /// <summary>
+    /// Response request from nekos.life with Success status and image url
+    /// </summary>
     public class Request
     {
         public Request(string imageurl, bool success, string error, int code)
