@@ -12,7 +12,10 @@ public static NekosSharp.NekosClient NekoClient = new NekosClient("Bot Name Here
 
 Then use any of the endpoints
 ```csharp
+Request Req = await NekoClient.Misc.Cat();
+Request Req = await NekoClient.Action.Slap();
 Request Req = await NekoClient.Image.Neko();
+Request Req = await NekoClient.Nsfw.Neko();
 ```
 
 # Request
