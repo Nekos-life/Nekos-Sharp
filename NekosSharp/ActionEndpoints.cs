@@ -10,11 +10,11 @@ namespace NekosSharp
     /// </summary>
     public class ActionEndpoints
     {
-        public ActionEndpoints(NekosClient client)
+        public ActionEndpoints(NekoClient client)
         {
             Client = client;
         }
-        private readonly NekosClient Client;
+        private readonly NekoClient Client;
         private readonly string API = "https://nekos.life/api/v2/img/";
 
         /// <summary>

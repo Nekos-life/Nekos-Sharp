@@ -10,12 +10,12 @@ namespace NekosSharp
     /// </summary>
     public class ImageEndpoints
     {
-        public ImageEndpoints(NekosClient client)
+        public ImageEndpoints(NekoClient client)
         {
             Client = client;
         }
 
-        private readonly NekosClient Client;
+        private readonly NekoClient Client;
         private readonly string API = "https://nekos.life/api/v2/img/";
 
         public async Task<Request> Neko()

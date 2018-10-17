@@ -8,18 +8,19 @@ namespace NekosSharp
     /// <summary>
     /// Instance of nekos.life for getting cute waifus, nekos, foxes, cat and other images :3
     /// </summary>
-    public class NekosClient
+    public class NekoClient
     {
-        public NekosClient(string BotName)
+        public NekoClient(string BotName)
         {
-            Client.DefaultRequestHeaders.Add("User-Agent", $"NekosSharp | {BotName}");
+            Client.DefaultRequestHeaders.Add("User-Agent", $"Nekos-Sharp | {BotName}");
+            Action = new ActionEndpoints(this);
             Misc = new MiscEndpoints(this);
             Image = new ImageEndpoints(this);
             Nsfw = new NsfwEndpoints(this);
         }
         private readonly HttpClient Client = new HttpClient();
         public LogType LogType = LogType.Info;
-
+        public ActionEndpoints Action;
         public MiscEndpoints Misc;
         public ImageEndpoints Image;
         public NsfwEndpoints Nsfw;
