@@ -22,7 +22,7 @@ Request Req = await NekoClient.Nsfw.Neko();
 
 `Action endpoints: 8`
 
-`Image endpoints: 9`
+`Image endpoints: 10`
 
 `Nsfw endpoints: 35 mmmhhh`
 
