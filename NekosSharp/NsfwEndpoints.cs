@@ -56,6 +56,7 @@ namespace NekosSharp
         {
             return await Client.SendRequest(API + "lewd");
         }
+
         /// <summary>
         /// Very lewd nekos :3 with gifs!
         /// </summary>

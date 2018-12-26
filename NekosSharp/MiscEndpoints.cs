@@ -26,6 +26,14 @@ namespace NekosSharp
         }
 
         /// <summary>
+        /// Dogs are very cute
+        /// </summary>
+        public async Task<Request> Dog()
+        {
+            return await Client.SendRequest(API + "woof");
+        }
+
+        /// <summary>
         /// Lizards can be cute baka
         /// </summary>
         public async Task<Request> Lizard()

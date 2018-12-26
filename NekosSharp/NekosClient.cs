@@ -12,7 +12,7 @@ namespace NekosSharp
     {
         public NekoClient(string BotName)
         {
-            Client.DefaultRequestHeaders.Add("User-Agent", $"Nekos-Sharp | {BotName}");
+            Client.DefaultRequestHeaders.Add("User-Agent", $"Nekos-Sharp 1.2 | {BotName}");
             Action = new ActionEndpoints(this);
             Misc = new MiscEndpoints(this);
             Image = new ImageEndpoints(this);
