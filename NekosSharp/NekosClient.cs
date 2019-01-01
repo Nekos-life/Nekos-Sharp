@@ -25,7 +25,7 @@ namespace NekosSharp
         public ImageEndpoints Image;
         public NsfwEndpoints Nsfw;
 
-        internal async Task<Request> SendRequest(string Url)
+        public async Task<Request> SendRequest(string Url)
         {
             Request Request = null;
             HttpResponseMessage Res = null;
