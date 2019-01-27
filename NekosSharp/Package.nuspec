@@ -2,13 +2,13 @@
 <package >
   <metadata>
     <id>Nekos-Sharp</id>
-    <version>1.2.0</version>
+    <version>1.3.0</version>
     <authors>xXBuilderBXx</authors>
     <licenseUrl>https://github.com/Nekos-life/Nekos-Sharp/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/Nekos-life/Nekos-Sharp</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A C# lib for getting cute nekos, waifus and Foxes from nekos.life</description>
-    <releaseNotes>Added version number to request header, added dog endpoint, added summary text to all image category endpoints</releaseNotes>
+    <releaseNotes>Made request function public, updated url structure and added raw data to request object</releaseNotes>
     <copyright>Copyright xXBuilderBXx 2018</copyright>
     <tags>Discord Bot</tags>
     <dependencies>

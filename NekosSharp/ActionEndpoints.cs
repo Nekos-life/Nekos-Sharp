@@ -15,14 +15,13 @@ namespace NekosSharp
             Client = client;
         }
         private readonly NekoClient Client;
-        private readonly string API = "https://nekos.life/api/v2/img/";
 
         /// <summary>
         /// Poke someone for fun
         /// </summary>
         public async Task<Request> Poke()
         {
-            return await Client.SendRequest(API + "poke");
+            return await Client.SendRequest("img/poke");
         }
 
         /// <summary>
@@ -30,7 +29,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Tickle()
         {
-            return await Client.SendRequest(API + "tickle");
+            return await Client.SendRequest("img/tickle");
         }
 
         /// <summary>
@@ -38,7 +37,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Kiss()
         {
-            return await Client.SendRequest(API + "kiss");
+            return await Client.SendRequest("img/kiss");
         }
         
         /// <summary>
@@ -46,7 +45,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Slap()
         {
-            return await Client.SendRequest(API + "slap");
+            return await Client.SendRequest("img/slap");
         }
 
         /// <summary>
@@ -54,7 +53,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Cuddle()
         {
-            return await Client.SendRequest(API + "cuddle");
+            return await Client.SendRequest("img/cuddle");
         }
 
         /// <summary>
@@ -62,7 +61,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Hug()
         {
-            return await Client.SendRequest(API + "hug");
+            return await Client.SendRequest("img/hug");
         }
 
         /// <summary>
@@ -70,7 +69,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Pat()
         {
-            return await Client.SendRequest(API + "pat");
+            return await Client.SendRequest("img/pat");
         }
 
         /// <summary>
@@ -78,7 +77,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Feed()
         {
-            return await Client.SendRequest(API + "feed");
+            return await Client.SendRequest("img/feed");
         }
     }
 }

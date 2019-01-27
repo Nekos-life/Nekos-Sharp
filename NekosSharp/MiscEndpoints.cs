@@ -15,14 +15,13 @@ namespace NekosSharp
             Client = client;
         }
         private readonly NekoClient Client;
-        private readonly string API = "https://nekos.life/api/v2/img/";
 
         /// <summary>
         /// Cute cats but very evil
         /// </summary>
         public async Task<Request> Cat()
         {
-            return await Client.SendRequest(API + "meow");
+            return await Client.SendRequest("img/meow");
         }
 
         /// <summary>
@@ -30,7 +29,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Dog()
         {
-            return await Client.SendRequest(API + "woof");
+            return await Client.SendRequest("img/woof");
         }
 
         /// <summary>
@@ -38,7 +37,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Lizard()
         {
-            return await Client.SendRequest(API + "lizard");
+            return await Client.SendRequest("img/lizard");
         }
         
         /// <summary>
@@ -46,7 +45,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> EightBall()
         {
-            return await Client.SendRequest(API + "8ball");
+            return await Client.SendRequest("img/8ball");
         }
     }
 }

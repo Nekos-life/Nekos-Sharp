@@ -12,7 +12,7 @@ namespace NekosSharp
     {
         public NekoClient(string BotName)
         {
-            Client.DefaultRequestHeaders.Add("User-Agent", $"Nekos-Sharp 1.2 | {BotName}");
+            Client.DefaultRequestHeaders.Add("User-Agent", $"Nekos-Sharp 1.3 | {BotName}");
             Action = new ActionEndpoints(this);
             Misc = new MiscEndpoints(this);
             Image = new ImageEndpoints(this);
@@ -25,17 +25,20 @@ namespace NekosSharp
         public ImageEndpoints Image;
         public NsfwEndpoints Nsfw;
 
+        /// <summary>
+        /// https://nekos.life/api/v2/ + Url
+        /// </summary>
         public async Task<Request> SendRequest(string Url)
         {
             Request Request = null;
             HttpResponseMessage Res = null;
             try
             {
-                Res = await Client.GetAsync(Url);
+                Res = await Client.GetAsync("https://nekos.life/api/v2/" + Url);
                 Res.EnsureSuccessStatusCode();
                 string Content = await Res.Content.ReadAsStringAsync();
                 JObject Msg = JObject.Parse(Content);
-                Request = new Request((string)Msg["url"], true, "", (int)Res.StatusCode);
+                Request = new Request(Msg, true, "", (int)Res.StatusCode);
                 if (LogType >= LogType.Info)
                     Console.WriteLine($"[NekosSharp] Success, {Request.ErrorMessage}");
                 if (LogType == LogType.Debug)
@@ -44,9 +47,9 @@ namespace NekosSharp
             catch (Exception ex)
             {
                 if (Res == null)
-                    Request = new Request("", false, ex.Message, 0);
+                    Request = new Request(null, false, ex.Message, 0);
                 else
-                    Request = new Request("", false, ex.Message, (int)Res.StatusCode);
+                    Request = new Request(null, false, ex.Message, (int)Res.StatusCode);
                 if (LogType >= LogType.Info)
                     Console.WriteLine($"[NekosSharp] Failed, {Request.ErrorMessage} {Request.ErrorCode}");
                 if (LogType == LogType.Debug)
@@ -64,9 +67,14 @@ namespace NekosSharp
     /// </summary>
     public class Request
     {
-        public Request(string imageurl, bool success, string error, int code)
+        public Request(JObject content, bool success, string error, int code)
         {
-            ImageUrl = imageurl;
+            if (content != null)
+            {
+                RawData = content;
+                if (content.ContainsKey("url"))
+                    ImageUrl = (string)content["url"];
+            }
             Success = success;
             ErrorCode = code;
             ErrorMessage = error;
@@ -75,6 +83,6 @@ namespace NekosSharp
         public readonly bool Success;
         public readonly int ErrorCode;
         public readonly string ErrorMessage;
-
+        public readonly dynamic RawData;
     }
 }
