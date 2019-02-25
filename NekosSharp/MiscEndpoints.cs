@@ -39,7 +39,15 @@ namespace NekosSharp
         {
             return await Client.SendRequest("img/lizard");
         }
-        
+
+        /// <summary>
+        /// QUACK!
+        /// </summary>
+        public async Task<Request> Goose()
+        {
+            return await Client.SendRequest("img/goose");
+        }
+
         /// <summary>
         /// Random 8ball response in an image
         /// </summary>

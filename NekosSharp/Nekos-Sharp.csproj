@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>1.3.3</Version>
+    <Authors>xXBuilderBXx</Authors>
+    <Company />
+    <Description>A C# lib for getting cute nekos, waifus and Foxes from nekos.life</Description>
+    <Copyright>Copyright 2019 xXBuilderBXx</Copyright>
+    <PackageTags>discord</PackageTags>
+    <PackageLicenseUrl>https://github.com/Nekos-life/Nekos-Sharp/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://blazedev.me</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Nekos-life/Nekos-Sharp</RepositoryUrl>
+    <PackageReleaseNotes>Added Goose endpoint, remove smallboobs endpoint and switched nuget package methods</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

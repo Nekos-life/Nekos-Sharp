@@ -129,14 +129,6 @@ namespace NekosSharp
         }
 
         /// <summary>
-        /// Flat as a chess board
-        /// </summary>
-        public async Task<Request> Flat()
-        {
-            return await Client.SendRequest("img/smallboobs");
-        }
-
-        /// <summary>
         /// UwU hentai pics
         /// </summary>
         public async Task<Request> Hentai()
