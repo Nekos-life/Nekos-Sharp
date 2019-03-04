@@ -10,6 +10,15 @@ Create an instance of the client
 public static NekosSharp.NekosClient NekoClient = new NekosClient("Bot Name Here");`
 ```
 
+Version 3 of nekos.life is here you can use them with
+THIS HAS NOT BEEN UPDATED YET!
+```csharp
+Request Req = await NekoClient.Misc_v3.Cat();
+Request Req = await NekoClient.Action_v3.Slap();
+Request Req = await NekoClient.Image_v3.Neko();
+Request Req = await NekoClient.Nsfw_v3.Neko();
+```
+
 Then use any of the endpoints
 ```csharp
 Request Req = await NekoClient.Misc.Cat();
