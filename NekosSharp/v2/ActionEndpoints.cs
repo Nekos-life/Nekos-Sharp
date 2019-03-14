@@ -21,7 +21,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Poke()
         {
-            return await Client.SendRequest("img/poke");
+            return await Client.SendRequest(false, "img/poke");
         }
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Tickle()
         {
-            return await Client.SendRequest("img/tickle");
+            return await Client.SendRequest(false, "img/tickle");
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Kiss()
         {
-            return await Client.SendRequest("img/kiss");
+            return await Client.SendRequest(false, "img/kiss");
         }
         
         /// <summary>
@@ -45,7 +45,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Slap()
         {
-            return await Client.SendRequest("img/slap");
+            return await Client.SendRequest(false, "img/slap");
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Cuddle()
         {
-            return await Client.SendRequest("img/cuddle");
+            return await Client.SendRequest(false, "img/cuddle");
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Hug()
         {
-            return await Client.SendRequest("img/hug");
+            return await Client.SendRequest(false, "img/hug");
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Pat()
         {
-            return await Client.SendRequest("img/pat");
+            return await Client.SendRequest(false, "img/pat");
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Feed()
         {
-            return await Client.SendRequest("img/feed");
+            return await Client.SendRequest(false, "img/feed");
         }
     }
 }

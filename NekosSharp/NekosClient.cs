@@ -25,16 +25,24 @@ namespace NekosSharp
         public ImageEndpoints Image;
         public NsfwEndpoints Nsfw;
 
+        public ActionEndpoints_v3 Action_v3;
+        public MiscEndpoints_v3 Misc_v3;
+        public ImageEndpoints_v3 Image_v3;
+        public NsfwEndpoints_v3 Nsfw_v3;
+
         /// <summary>
         /// https://nekos.life/api/v2/ + Url
         /// </summary>
-        public async Task<Request> SendRequest(string Url)
+        public async Task<Request> SendRequest(bool Usev3, string Url)
         {
+            string Base = "https://nekos.life/api/v2/";
+            if (Usev3)
+                Base = "https://api.nekos.dev/api/v3/images/";
             Request Request = null;
             HttpResponseMessage Res = null;
             try
             {
-                Res = await Client.GetAsync("https://nekos.life/api/v2/" + Url);
+                Res = await Client.GetAsync(Base + Url);
                 Res.EnsureSuccessStatusCode();
                 string Content = await Res.Content.ReadAsStringAsync();
                 JObject Msg = JObject.Parse(Content);
@@ -74,6 +82,10 @@ namespace NekosSharp
                 RawData = content;
                 if (content.ContainsKey("url"))
                     ImageUrl = (string)content["url"];
+                else if (content.ContainsKey("data"))
+                {
+                    ImageUrl = (string)content["data"]["response"]["url"];
+                }
             }
             Success = success;
             ErrorCode = code;

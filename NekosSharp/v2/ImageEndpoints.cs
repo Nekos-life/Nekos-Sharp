@@ -21,7 +21,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Neko()
         {
-            return await Client.SendRequest("img/neko");
+            return await Client.SendRequest(false, "img/neko");
         }
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> NekoGif()
         {
-            return await Client.SendRequest("img/ngif");
+            return await Client.SendRequest(false, "img/ngif");
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Fox()
         {
-            return await Client.SendRequest("img/fox_girl");
+            return await Client.SendRequest(false, "img/fox_girl");
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Smug()
         {
-            return await Client.SendRequest("img/smug");
+            return await Client.SendRequest(false, "img/smug");
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Holo()
         {
-            return await Client.SendRequest("img/holo");
+            return await Client.SendRequest(false, "img/holo");
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Avatar()
         {
-            return await Client.SendRequest("img/avatar");
+            return await Client.SendRequest(false, "img/avatar");
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Wallpaper()
         {
-            return await Client.SendRequest("img/wallpaper");
+            return await Client.SendRequest(false, "img/wallpaper");
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Baka()
         {
-            return await Client.SendRequest("img/baka");
+            return await Client.SendRequest(false, "img/baka");
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Waifu()
         {
-            return await Client.SendRequest("img/waifu");
+            return await Client.SendRequest(false, "img/waifu");
         }
     }
 }

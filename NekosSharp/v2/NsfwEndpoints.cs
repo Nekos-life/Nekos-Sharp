@@ -21,7 +21,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Femdom()
         {
-            return await Client.SendRequest("img/femdom");
+            return await Client.SendRequest(false, "img/femdom");
         }
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> ClassicGif()
         {
-            return await Client.SendRequest("img/classic");
+            return await Client.SendRequest(false, "img/classic");
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Feet()
         {
-            return await Client.SendRequest("img/feet");
+            return await Client.SendRequest(false, "img/feet");
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> FeetGif()
         {
-            return await Client.SendRequest("img/feetg");
+            return await Client.SendRequest(false, "img/feetg");
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Neko()
         {
-            return await Client.SendRequest("img/lewd");
+            return await Client.SendRequest(false, "img/lewd");
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> NekoGif()
         {
-            return await Client.SendRequest("img/nsfw_neko_gif");
+            return await Client.SendRequest(false, "img/nsfw_neko_gif");
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> KuniGif()
         {
-            return await Client.SendRequest("img/kuni");
+            return await Client.SendRequest(false, "img/kuni");
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Boobs()
         {
-            return await Client.SendRequest("img/tits");
+            return await Client.SendRequest(false, "img/tits");
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> BoobsGif()
         {
-            return await Client.SendRequest("img/boobs");
+            return await Client.SendRequest(false, "img/boobs");
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Pussy()
         {
-            return await Client.SendRequest("img/pussy_jpg");
+            return await Client.SendRequest(false, "img/pussy_jpg");
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> PussyGif()
         {
-            return await Client.SendRequest("img/pussy");
+            return await Client.SendRequest(false, "img/pussy");
         }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Cum()
         {
-            return await Client.SendRequest("img/cum_jpg");
+            return await Client.SendRequest(false, "img/cum_jpg");
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> CumGif()
         {
-            return await Client.SendRequest("img/cum");
+            return await Client.SendRequest(false, "img/cum");
         }
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Spank()
         {
-            return await Client.SendRequest("img/spank");
+            return await Client.SendRequest(false, "img/spank");
         }
 
         /// <summary>
@@ -133,7 +133,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Hentai()
         {
-            return await Client.SendRequest("img/hentai");
+            return await Client.SendRequest(false, "img/hentai");
         }
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> HentaiGif()
         {
-            return await Client.SendRequest("img/Random_hentai_gif");
+            return await Client.SendRequest(false, "img/Random_hentai_gif");
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Avatar()
         {
-            return await Client.SendRequest("img/nsfw_avatar");
+            return await Client.SendRequest(false, "img/nsfw_avatar");
         }
 
         /// <summary>
@@ -157,7 +157,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Solo()
         {
-            return await Client.SendRequest("img/solo");
+            return await Client.SendRequest(false, "img/solo");
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> SoloGif()
         {
-            return await Client.SendRequest("img/solog");
+            return await Client.SendRequest(false, "img/solog");
         }
 
         /// <summary>
@@ -173,7 +173,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Blowjob()
         {
-            return await Client.SendRequest("img/blowjob");
+            return await Client.SendRequest(false, "img/blowjob");
         }
 
         /// <summary>
@@ -181,7 +181,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> BlowjobGif()
         {
-            return await Client.SendRequest("img/bj");
+            return await Client.SendRequest(false, "img/bj");
         }
 
         /// <summary>
@@ -189,7 +189,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Yuri()
         {
-            return await Client.SendRequest("img/yuri");
+            return await Client.SendRequest(false, "img/yuri");
         }
 
         /// <summary>
@@ -197,7 +197,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> YuriGif()
         {
-            return await Client.SendRequest("img/les");
+            return await Client.SendRequest(false, "img/les");
         }
 
         /// <summary>
@@ -205,7 +205,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Trap()
         {
-            return await Client.SendRequest("img/trap");
+            return await Client.SendRequest(false, "img/trap");
         }
 
         /// <summary>
@@ -213,7 +213,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> AnalGif()
         {
-            return await Client.SendRequest("img/anal");
+            return await Client.SendRequest(false, "img/anal");
         }
 
         /// <summary>
@@ -221,7 +221,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> GasmAvatar()
         {
-            return await Client.SendRequest("img/gasm");
+            return await Client.SendRequest(false, "img/gasm");
         }
 
         /// <summary>
@@ -229,7 +229,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Futanari()
         {
-            return await Client.SendRequest("img/futanari");
+            return await Client.SendRequest(false, "img/futanari");
         }
 
         /// <summary>
@@ -237,7 +237,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> PwankGif()
         {
-            return await Client.SendRequest("img/pwankg");
+            return await Client.SendRequest(false, "img/pwankg");
         }
 
         /// <summary>
@@ -245,7 +245,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Lewd()
         {
-            return await Client.SendRequest("img/ero");
+            return await Client.SendRequest(false, "img/ero");
         }
 
         /// <summary>
@@ -253,7 +253,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> LewdYuri()
         {
-            return await Client.SendRequest("img/eroyuri");
+            return await Client.SendRequest(false, "img/eroyuri");
         }
 
         /// <summary>
@@ -261,7 +261,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> LewdNeko()
         {
-            return await Client.SendRequest("img/eron");
+            return await Client.SendRequest(false, "img/eron");
         }
 
         /// <summary>
@@ -269,7 +269,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> LewdFeet()
         {
-            return await Client.SendRequest("img/erofeet");
+            return await Client.SendRequest(false, "img/erofeet");
         }
 
         /// <summary>
@@ -277,7 +277,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> LewdHolo()
         {
-            return await Client.SendRequest("img/hololewd");
+            return await Client.SendRequest(false, "img/hololewd");
         }
 
         /// <summary>
@@ -285,7 +285,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> LewdFox()
         {
-            return await Client.SendRequest("img/lewdk");
+            return await Client.SendRequest(false, "img/lewdk");
         }
     }
 }

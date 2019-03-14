@@ -21,7 +21,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Cat()
         {
-            return await Client.SendRequest("img/meow");
+            return await Client.SendRequest(false, "img/meow");
         }
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Dog()
         {
-            return await Client.SendRequest("img/woof");
+            return await Client.SendRequest(false, "img/woof");
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Lizard()
         {
-            return await Client.SendRequest("img/lizard");
+            return await Client.SendRequest(false, "img/lizard");
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> Goose()
         {
-            return await Client.SendRequest("img/goose");
+            return await Client.SendRequest(false, "img/goose");
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace NekosSharp
         /// </summary>
         public async Task<Request> EightBall()
         {
-            return await Client.SendRequest("img/8ball");
+            return await Client.SendRequest(false, "img/8ball");
         }
     }
 }
