@@ -17,6 +17,10 @@ namespace NekosSharp
             Misc = new MiscEndpoints(this);
             Image = new ImageEndpoints(this);
             Nsfw = new NsfwEndpoints(this);
+            Action_v3 = new ActionEndpoints_v3(this);
+            Misc_v3 = new MiscEndpoints_v3(this);
+            Image_v3 = new ImageEndpoints_v3(this);
+            Nsfw_v3 = new NsfwEndpoints_v3(this);
         }
         private readonly HttpClient Client = new HttpClient();
         public LogType LogType = LogType.Info;
