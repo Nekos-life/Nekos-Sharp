@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>3.2</Version>
+    <Version>3.3</Version>
     <Authors>xXBuilderBXx</Authors>
     <Company />
     <Description>A C# lib for getting cute nekos, waifus and Foxes from nekos.life</Description>
@@ -12,7 +12,7 @@
     <PackageLicenseUrl>https://github.com/Nekos-life/Nekos-Sharp/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://blazedev.me</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Nekos-life/Nekos-Sharp</RepositoryUrl>
-    <PackageReleaseNotes>Small fix for a rare invalid url bug</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated fix for url space bug and fixed version number</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

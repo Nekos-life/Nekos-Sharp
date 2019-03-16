@@ -12,7 +12,7 @@ namespace NekosSharp
     {
         public NekoClient(string BotName)
         {
-            Client.DefaultRequestHeaders.Add("User-Agent", $"Nekos-Sharp 1.3 | {BotName}");
+            Client.DefaultRequestHeaders.Add("User-Agent", $"Nekos-Sharp {Version} | {BotName}");
             Action = new ActionEndpoints(this);
             Misc = new MiscEndpoints(this);
             Image = new ImageEndpoints(this);
@@ -23,6 +23,8 @@ namespace NekosSharp
             Nsfw_v3 = new NsfwEndpoints_v3(this);
         }
         private readonly HttpClient Client = new HttpClient();
+        public readonly string Version = "3.3";
+
         public LogType LogType = LogType.Info;
         public ActionEndpoints Action;
         public MiscEndpoints Misc;
@@ -88,7 +90,7 @@ namespace NekosSharp
                     ImageUrl = (string)content["url"];
                 else if (content.ContainsKey("data"))
                 {
-                    ImageUrl = ((string)content["data"]["response"]["url"]).Replace("/ ", "");
+                    ImageUrl = ((string)content["data"]["response"]["url"]).Replace("/ ", "/%20");
                 }
             }
             Success = success;
