@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>3.1</Version>
+    <Version>3.2</Version>
     <Authors>xXBuilderBXx</Authors>
     <Company />
     <Description>A C# lib for getting cute nekos, waifus and Foxes from nekos.life</Description>
@@ -12,7 +12,7 @@
     <PackageLicenseUrl>https://github.com/Nekos-life/Nekos-Sharp/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://blazedev.me</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Nekos-life/Nekos-Sharp</RepositoryUrl>
-    <PackageReleaseNotes>FML forgot to setup the endpoint hooks, Added support for v3 with lots of new content</PackageReleaseNotes>
+    <PackageReleaseNotes>Small fix for a rare invalid url bug</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

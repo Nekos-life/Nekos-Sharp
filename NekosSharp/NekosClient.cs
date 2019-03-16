@@ -88,7 +88,7 @@ namespace NekosSharp
                     ImageUrl = (string)content["url"];
                 else if (content.ContainsKey("data"))
                 {
-                    ImageUrl = (string)content["data"]["response"]["url"];
+                    ImageUrl = ((string)content["data"]["response"]["url"]).Replace("/ ", "");
                 }
             }
             Success = success;
