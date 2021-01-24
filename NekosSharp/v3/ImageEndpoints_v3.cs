@@ -19,81 +19,71 @@ namespace NekosSharp
         /// <summary>
         /// Get cute neko girls
         /// </summary>
-        public async Task<Request> Neko()
-        {
-            return await Client.SendRequest(true, "sfw/img/neko");
-        }
+        public Task<Request> Neko(int Count = 1)
+            => Client.SendRequest(true, "sfw/img/neko", Count);
+        
 
         /// <summary>
         /// Get cute neko girls in gif
         /// </summary>
-        public async Task<Request> NekoGif()
-        {
-            return await Client.SendRequest(true, "sfw/gif/neko");
-        }
+        public Task<Request> NekoGif(int Count = 1)
+            => Client.SendRequest(true, "sfw/gif/neko", Count);
+        
 
         /// <summary>
         /// Get bushy fox girls
         /// </summary>
-        public async Task<Request> Fox()
-        {
-            return await Client.SendRequest(true, "sfw/img/kitsune");
-        }
+        public Task<Request> Fox(int Count = 1)
+            => Client.SendRequest(true, "sfw/img/kitsune", Count);
+        
 
         /// <summary>
         /// Get a holo image (fox character)
         /// </summary>
-        public async Task<Request> Holo()
-        {
-            return await Client.SendRequest(true, "sfw/img/holo");
-        }
+        public Task<Request> Holo(int Count = 1)
+            => Client.SendRequest(true, "sfw/img/holo", Count);
+        
 
         /// <summary>
         /// Get a random weeb avatar
         /// </summary>
-        public async Task<Request> Avatar()
-        {
-            return await Client.SendRequest(true, "sfw/img/no_tag_avatar");
-        }
+        public Task<Request> Avatar(int Count = 1)
+            => Client.SendRequest(true, "sfw/img/no_tag_avatar", Count);
+        
 
         /// <summary>
         /// Get a random neko avatar
         /// </summary>
-        public async Task<Request> NekoAvatar()
-        {
-            return await Client.SendRequest(true, "sfw/img/neko_avatars_avatar");
-        }
+        public Task<Request> NekoAvatar(int Count = 1)
+            => Client.SendRequest(true, "sfw/img/neko_avatars_avatar", Count);
+        
 
         /// <summary>
         /// Get an awesome anime wallpaper
         /// </summary>
-        public async Task<Request> Wallpaper()
-        {
-            return await Client.SendRequest(true, "sfw/img/wallpaper");
-        }
+        public Task<Request> Wallpaper(int Count = 1)
+            => Client.SendRequest(true, "sfw/img/wallpaper", Count);
+        
 
         /// <summary>
         /// Get a random waifu to steal
         /// </summary>
-        public async Task<Request> Waifu()
-        {
-            return await Client.SendRequest(true, "sfw/img/waifu");
-        }
+        public Task<Request> Waifu(int Count = 1)
+            => Client.SendRequest(true, "sfw/img/waifu", Count);
+        
 
         /// <summary>
         /// Very smug 
         /// </summary>
-        public async Task<Request> SmugGif()
-        {
-            return await Client.SendRequest(true, "sfw/gif/smug");
-        }
+        public Task<Request> SmugGif(int Count = 1)
+            => Client.SendRequest(true, "sfw/gif/smug", Count);
+        
 
         /// <summary>
         /// Baka baka sexy bitch
         /// </summary>
-        public async Task<Request> BakaGif()
-        {
-            return await Client.SendRequest(true, "sfw/gif/baka");
-        }
+        public Task<Request> BakaGif(int Count = 1)
+            => Client.SendRequest(true, "sfw/gif/baka", Count);
+        
     }
 }

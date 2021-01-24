@@ -19,65 +19,57 @@ namespace NekosSharp
         /// <summary>
         /// Tickle those funny bones
         /// </summary>
-        public async Task<Request> TickleGif()
-        {
-            return await Client.SendRequest(true, "sfw/gif/tickle");
-        }
+        public Task<Request> TickleGif(int Count = 1)
+            => Client.SendRequest(true, "sfw/gif/tickle", Count);
+        
 
         /// <summary>
         /// Poke someone for fun
         /// </summary>
-        public async Task<Request> PokeGif()
-        {
-            return await Client.SendRequest(true, "sfw/gif/poke");
-        }
+        public Task<Request> PokeGif(int Count = 1)
+            => Client.SendRequest(true, "sfw/gif/poke", Count);
+        
 
         /// <summary>
         /// Kiss someone you love
         /// </summary>
-        public async Task<Request> KissGif()
-        {
-            return await Client.SendRequest(true, "sfw/gif/kiss");
-        }
+        public Task<Request> KissGif(int Count = 1)
+            => Client.SendRequest(true, "sfw/gif/kiss", Count);
         
+       
         /// <summary>
         /// Slap a bad user
         /// </summary>
-        public async Task<Request> SlapGif()
-        {
-            return await Client.SendRequest(true, "sfw/gif/slap");
-        }
+        public Task<Request> SlapGif(int Count = 1)
+            => Client.SendRequest(true, "sfw/gif/slap", Count);
+        
 
         /// <summary>
         /// Cuddle your waifus
         /// </summary>
-        public async Task<Request> CuddleGif()
-        {
-            return await Client.SendRequest(true, "sfw/gif/cuddle");
-        }
+        public Task<Request> CuddleGif(int Count = 1)
+            => Client.SendRequest(true, "sfw/gif/cuddle", Count);
+        
 
         /// <summary>
         /// Hug someone
         /// </summary>
-        public async Task<Request> HugGif()
-        {
-            return await Client.SendRequest(true, "sfw/gif/hug");
-        }
+        public Task<Request> HugGif(int Count = 1)
+            => Client.SendRequest(true, "sfw/gif/hug", Count);
+        
 
         /// <summary>
         /// Pat someone for being cute :3
         /// </summary>
-        public async Task<Request> PatGif()
-        {
-            return await Client.SendRequest(true, "sfw/gif/pat");
-        }
+        public Task<Request> PatGif(int Count = 1)
+            => Client.SendRequest(true, "sfw/gif/pat", Count);
+        
 
         /// <summary>
         /// Feed your lover
         /// </summary>
-        public async Task<Request> FeedGif()
-        {
-            return await Client.SendRequest(true, "sfw/gif/feed");
-        }
+        public Task<Request> FeedGif(int Count = 1)
+            => Client.SendRequest(true, "sfw/gif/feed", Count);
+        
     }
 }

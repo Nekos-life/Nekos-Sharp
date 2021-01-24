@@ -19,273 +19,238 @@ namespace NekosSharp
         /// <summary>
         /// Abusive females but the good kind :eyes:
         /// </summary>
-        public async Task<Request> Femdom()
-        {
-            return await Client.SendRequest(false, "img/femdom");
-        }
+        public Task<Request> Femdom()
+            => Client.SendRequest(false, "img/femdom");
+        
 
         /// <summary>
         /// Classic hentai with no BS
         /// </summary>
-        public async Task<Request> ClassicGif()
-        {
-            return await Client.SendRequest(false, "img/classic");
-        }
+        public Task<Request> ClassicGif()
+            => Client.SendRequest(false, "img/classic");
+        
 
         /// <summary>
         /// Foot fetish anyone?
         /// </summary>
-        public async Task<Request> Feet()
-        {
-            return await Client.SendRequest(false, "img/feet");
-        }
+        public Task<Request> Feet()
+            => Client.SendRequest(false, "img/feet");
+        
 
         /// <summary>
         /// Foot fetish anyone? with gifs!
         /// </summary>
-        public async Task<Request> FeetGif()
-        {
-            return await Client.SendRequest(false, "img/feetg");
-        }
+        public Task<Request> FeetGif()
+            => Client.SendRequest(false, "img/feetg");
+        
 
         /// <summary>
         /// Very lewd nekos :3
         /// </summary>
-        public async Task<Request> Neko()
-        {
-            return await Client.SendRequest(false, "img/lewd");
-        }
+        public Task<Request> Neko()
+            => Client.SendRequest(false, "img/lewd");
+        
 
         /// <summary>
         /// Very lewd nekos :3 with gifs!
         /// </summary>
-        public async Task<Request> NekoGif()
-        {
-            return await Client.SendRequest(false, "img/nsfw_neko_gif");
-        }
+        public Task<Request> NekoGif()
+            => Client.SendRequest(false, "img/nsfw_neko_gif");
+        
 
         /// <summary>
         /// Pussy lickin good
         /// </summary>
-        public async Task<Request> KuniGif()
-        {
-            return await Client.SendRequest(false, "img/kuni");
-        }
+        public Task<Request> KuniGif()
+            => Client.SendRequest(false, "img/kuni");
+        
 
         /// <summary>
         /// Fondles those boobs :3
         /// </summary>
-        public async Task<Request> Boobs()
-        {
-            return await Client.SendRequest(false, "img/tits");
-        }
+        public Task<Request> Boobs()
+            => Client.SendRequest(false, "img/tits");
+        
 
         /// <summary>
         /// Fondles those boobs with gifs :3 
         /// </summary>
-        public async Task<Request> BoobsGif()
-        {
-            return await Client.SendRequest(false, "img/boobs");
-        }
+        public Task<Request> BoobsGif()
+            => Client.SendRequest(false, "img/boobs");
+        
 
         /// <summary>
         /// Slaps roof of pussy, this hole can fit so many dicks
         /// </summary>
-        public async Task<Request> Pussy()
-        {
-            return await Client.SendRequest(false, "img/pussy_jpg");
-        }
+        public Task<Request> Pussy()
+            => Client.SendRequest(false, "img/pussy_jpg");
+        
 
         /// <summary>
         /// Slaps roof of pussy, this hole can fit so many dicks with gifs!
         /// </summary>
-        public async Task<Request> PussyGif()
-        {
-            return await Client.SendRequest(false, "img/pussy");
-        }
+        public Task<Request> PussyGif()
+            => Client.SendRequest(false, "img/pussy");
+        
 
         /// <summary>
         /// HNNNGGGG
         /// </summary>
-        public async Task<Request> Cum()
-        {
-            return await Client.SendRequest(false, "img/cum_jpg");
-        }
+        public Task<Request> Cum()
+            => Client.SendRequest(false, "img/cum_jpg");
+        
 
         /// <summary>
         /// HNNNGGGG gifs
         /// </summary>
-        public async Task<Request> CumGif()
-        {
-            return await Client.SendRequest(false, "img/cum");
-        }
+        public Task<Request> CumGif()
+            => Client.SendRequest(false, "img/cum");
+        
 
         /// <summary>
         /// Lewd spanking
         /// </summary>
-        public async Task<Request> Spank()
-        {
-            return await Client.SendRequest(false, "img/spank");
-        }
+        public Task<Request> Spank()
+            => Client.SendRequest(false, "img/spank");
+        
 
         /// <summary>
         /// UwU hentai pics
         /// </summary>
-        public async Task<Request> Hentai()
-        {
-            return await Client.SendRequest(false, "img/hentai");
-        }
+        public Task<Request> Hentai()
+            => Client.SendRequest(false, "img/hentai");
+        
 
         /// <summary>
         /// UwU hentai gifs
         /// </summary>
-        public async Task<Request> HentaiGif()
-        {
-            return await Client.SendRequest(false, "img/Random_hentai_gif");
-        }
+        public Task<Request> HentaiGif()
+            => Client.SendRequest(false, "img/Random_hentai_gif");
+        
 
         /// <summary>
         /// Very lewd avatars DEMONETIZED!
         /// </summary>
-        public async Task<Request> Avatar()
-        {
-            return await Client.SendRequest(false, "img/nsfw_avatar");
-        }
+        public Task<Request> Avatar()
+            => Client.SendRequest(false, "img/nsfw_avatar");
+        
 
         /// <summary>
         /// One women band
         /// </summary>
-        public async Task<Request> Solo()
-        {
-            return await Client.SendRequest(false, "img/solo");
-        }
+        public Task<Request> Solo()
+            => Client.SendRequest(false, "img/solo");
+        
 
         /// <summary>
         /// One women band with gifs!
         /// </summary>
-        public async Task<Request> SoloGif()
-        {
-            return await Client.SendRequest(false, "img/solog");
-        }
+        public Task<Request> SoloGif()
+            => Client.SendRequest(false, "img/solog");
+        
 
         /// <summary>
         /// Give big succ
         /// </summary>
-        public async Task<Request> Blowjob()
-        {
-            return await Client.SendRequest(false, "img/blowjob");
-        }
+        public Task<Request> Blowjob()
+            => Client.SendRequest(false, "img/blowjob");
+        
 
         /// <summary>
         /// Give big succ with gifs!
         /// </summary>
-        public async Task<Request> BlowjobGif()
-        {
-            return await Client.SendRequest(false, "img/bj");
-        }
+        public Task<Request> BlowjobGif()
+            => Client.SendRequest(false, "img/bj");
+        
 
         /// <summary>
         /// Hot lewsbian couple
         /// </summary>
-        public async Task<Request> Yuri()
-        {
-            return await Client.SendRequest(false, "img/yuri");
-        }
+        public Task<Request> Yuri()
+            => Client.SendRequest(false, "img/yuri");
+        
 
         /// <summary>
         /// Hot lewsbian couple with gifs!
         /// </summary>
-        public async Task<Request> YuriGif()
-        {
-            return await Client.SendRequest(false, "img/les");
-        }
+        public Task<Request> YuriGif()
+            => Client.SendRequest(false, "img/les");
+        
 
         /// <summary>
         /// Males dressed as female
         /// </summary>
-        public async Task<Request> Trap()
-        {
-            return await Client.SendRequest(false, "img/trap");
-        }
+        public Task<Request> Trap()
+            => Client.SendRequest(false, "img/trap");
+        
 
         /// <summary>
         /// An alternative hole? what madness
         /// </summary>
-        public async Task<Request> AnalGif()
-        {
-            return await Client.SendRequest(false, "img/anal");
-        }
+        public Task<Request> AnalGif()
+            => Client.SendRequest(false, "img/anal");
+        
 
         /// <summary>
         /// (╯°□°）╯︵ ┻━┻
         /// </summary>
-        public async Task<Request> GasmAvatar()
-        {
-            return await Client.SendRequest(false, "img/gasm");
-        }
+        public Task<Request> GasmAvatar()
+            => Client.SendRequest(false, "img/gasm");
+        
 
         /// <summary>
         /// Chicks with dicks go figure
         /// </summary>
-        public async Task<Request> Futanari()
-        {
-            return await Client.SendRequest(false, "img/futanari");
-        }
+        public Task<Request> Futanari()
+            => Client.SendRequest(false, "img/futanari");
+        
 
         /// <summary>
         /// Rubbin dat pussy
         /// </summary>
-        public async Task<Request> PwankGif()
-        {
-            return await Client.SendRequest(false, "img/pwankg");
-        }
+        public Task<Request> PwankGif()
+            => Client.SendRequest(false, "img/pwankg");
+        
 
         /// <summary>
         /// Slightly lewd waifus
         /// </summary>
-        public async Task<Request> Lewd()
-        {
-            return await Client.SendRequest(false, "img/ero");
-        }
+        public Task<Request> Lewd()
+            => Client.SendRequest(false, "img/ero");
+        
 
         /// <summary>
         /// Slightly lewd yuri couple
         /// </summary>
-        public async Task<Request> LewdYuri()
-        {
-            return await Client.SendRequest(false, "img/eroyuri");
-        }
+        public Task<Request> LewdYuri()
+            => Client.SendRequest(false, "img/eroyuri");
 
         /// <summary>
         /// Slightly lewd nekos girls
         /// </summary>
-        public async Task<Request> LewdNeko()
-        {
-            return await Client.SendRequest(false, "img/eron");
-        }
+        public Task<Request> LewdNeko()
+            => Client.SendRequest(false, "img/eron");
+        
 
         /// <summary>
         /// Slightly lewd feet
         /// </summary>
-        public async Task<Request> LewdFeet()
-        {
-            return await Client.SendRequest(false, "img/erofeet");
-        }
+        public Task<Request> LewdFeet()
+            => Client.SendRequest(false, "img/erofeet");
+        
 
         /// <summary>
         /// Slightly lewd holo 
         /// </summary>
-        public async Task<Request> LewdHolo()
-        {
-            return await Client.SendRequest(false, "img/hololewd");
-        }
+        public Task<Request> LewdHolo()
+            => Client.SendRequest(false, "img/hololewd");
+        
 
         /// <summary>
         /// Slightly lewd fox girls
         /// </summary>
-        public async Task<Request> LewdFox()
-        {
-            return await Client.SendRequest(false, "img/lewdk");
-        }
+        public Task<Request> LewdFox()
+            => Client.SendRequest(false, "img/lewdk");
+        
     }
 }

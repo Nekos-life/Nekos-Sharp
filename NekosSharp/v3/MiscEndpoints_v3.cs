@@ -19,25 +19,22 @@ namespace NekosSharp
         /// <summary>
         /// Cute cats but very evil
         /// </summary>
-        public async Task<Request> Cat()
-        {
-            return await Client.SendRequest(true, "sfw/img/cat");
-        }
+        public Task<Request> Cat(int Count = 1)
+            => Client.SendRequest(true, "sfw/img/cat", Count);
+        
 
         /// <summary>
         /// Lizards can be cute baka
         /// </summary>
-        public async Task<Request> Lizard()
-        {
-            return await Client.SendRequest(true, "sfw/img/lizard");
-        }
+        public Task<Request> Lizard(int Count = 1)
+            => Client.SendRequest(true, "sfw/img/lizard", Count);
+        
 
         /// <summary>
         /// Random 8ball response in an image
         /// </summary>
-        public async Task<Request> EightBall()
-        {
-            return await Client.SendRequest(true, "sfw/img/8ball");
-        }
+        public Task<Request> EightBall(int Count = 1)
+            => Client.SendRequest(true, "sfw/img/8ball", Count);
+        
     }
 }

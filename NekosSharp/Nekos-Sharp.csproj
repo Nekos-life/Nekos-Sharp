@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>3.3.1</Version>
+    <Version>3.5.0</Version>
     <Authors>Builderb</Authors>
     <Company>Fluxpoint Development</Company>
     <Description>A C# lib for getting cute nekos, waifus and Foxes from nekos.life</Description>
@@ -12,11 +12,11 @@
     <PackageLicenseUrl>https://github.com/Nekos-life/Nekos-Sharp/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://fluxpoint.dev</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Nekos-life/Nekos-Sharp</RepositoryUrl>
-    <PackageReleaseNotes>Updated fix for url space bug and fixed version number</PackageReleaseNotes>
+    <PackageReleaseNotes>Latest optimizations and fixes.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
   <ItemGroup>

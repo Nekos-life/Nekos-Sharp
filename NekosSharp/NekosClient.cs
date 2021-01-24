@@ -1,6 +1,9 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
+using System.IO;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace NekosSharp
@@ -12,7 +15,13 @@ namespace NekosSharp
     {
         public NekoClient(string BotName)
         {
-            Client.DefaultRequestHeaders.Add("User-Agent", $"Nekos-Sharp {Version} | {BotName}");
+            if (Client == null)
+            {
+                Client = new HttpClient();
+                Json = new JsonSerializer();
+                Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                Client.DefaultRequestHeaders.Add("User-Agent", $"Nekos-Sharp {Version} | {BotName}");
+            }
             Action = new ActionEndpoints(this);
             Misc = new MiscEndpoints(this);
             Image = new ImageEndpoints(this);
@@ -22,8 +31,9 @@ namespace NekosSharp
             Image_v3 = new ImageEndpoints_v3(this);
             Nsfw_v3 = new NsfwEndpoints_v3(this);
         }
-        private readonly HttpClient Client = new HttpClient();
-        public readonly string Version = "3.3";
+        private static HttpClient Client;
+        public static readonly string Version = "3.5.0";
+        private static JsonSerializer Json;
 
         public LogType LogType = LogType.Info;
         public ActionEndpoints Action;
@@ -39,38 +49,67 @@ namespace NekosSharp
         /// <summary>
         /// https://nekos.life/api/v2/ + Url
         /// </summary>
-        public async Task<Request> SendRequest(bool Usev3, string Url)
+        public async Task<Request> SendRequest(bool Usev3, string Url, int Count = 1)
         {
-            string Base = "https://nekos.life/api/v2/";
+            string Base = "https://nekos.life/api/v2/" + Url;
             if (Usev3)
-                Base = "https://api.nekos.dev/api/v3/images/";
+            {
+                Base = "https://api.nekos.dev/api/v3/images/" + Url;
+                if (Count != 1)
+                    Base += Base + $"?count={Count}";
+            }
             Request Request = null;
             HttpResponseMessage Res = null;
             try
             {
-                Res = await Client.GetAsync(Base + Url);
+                Res = await Client.GetAsync(Base, HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(false);
                 Res.EnsureSuccessStatusCode();
-                string Content = await Res.Content.ReadAsStringAsync();
-                JObject Msg = JObject.Parse(Content);
-                Request = new Request(Msg, true, "", (int)Res.StatusCode);
-                if (LogType >= LogType.Info)
-                    Console.WriteLine($"[NekosSharp] Success, {Request.ErrorMessage}");
-                if (LogType == LogType.Debug)
-                    Console.WriteLine("[NekoSharp] Request response in JSON\n" + Msg);
+                Stream Stream = await Res.Content.ReadAsStreamAsync().ConfigureAwait(false);
+                using (TextReader text = new StreamReader(Stream))
+                using (JsonReader reader = new JsonTextReader(text))
+                {
+                    JToken Value = await JObject.ReadFromAsync(reader).ConfigureAwait(false);
+                    if (Usev3)
+                        Request = new Request("", 200) { ImageUrl = (string)Value["data"]["response"]["url"] };
+                    else
+                        Request = new Request("", 200) { ImageUrl = (string)Value["url"] };
+                }
+                switch (LogType)
+                {
+                    case LogType.Info:
+                        Console.WriteLine($"[NekosSharp] Success, {Request.Error}");
+                        break;
+                    case LogType.Debug:
+                        Console.WriteLine($"[NekosSharp] Success, {Request.Error}");
+                        Console.WriteLine("[NekosSharp] Request response in JSON\n" + JsonConvert.SerializeObject(Request, Formatting.Indented));
+                        break;
+                }
             }
             catch (Exception ex)
             {
                 if (Res == null)
-                    Request = new Request(null, false, ex.Message, 0);
+                    Request = new Request(ex.Message, 0);
                 else
-                    Request = new Request(null, false, ex.Message, (int)Res.StatusCode);
+                    Request = new Request(ex.Message, (int)Res.StatusCode);
+                switch (LogType)
+                {
+                    case LogType.Info:
+                        Console.WriteLine($"[NekosSharp] Failed, {Request.Error} {Request.Code}");
+                        break;
+                    case LogType.Debug:
+                        Console.WriteLine($"[NekosSharp] Failed, {Request.Error} {Request.Code}");
+                        Console.WriteLine("[NekosSharp] Exception\n" + ex.ToString());
+                        break;
+                }
+            }
+            if (Request == null)
+            {
+                Request = new Request("Failed to parse json response", 400);
                 if (LogType >= LogType.Info)
-                    Console.WriteLine($"[NekosSharp] Failed, {Request.ErrorMessage} {Request.ErrorCode}");
-                if (LogType == LogType.Debug)
-                    Console.WriteLine("[NekosSharp] Exception\n" + ex.ToString());
+                    Console.WriteLine($"[NekosSharp] Failed to parse json response");
             }
             return Request;
-        } 
+        }
     }
     public enum LogType
     {
@@ -81,26 +120,16 @@ namespace NekosSharp
     /// </summary>
     public class Request
     {
-        public Request(JObject content, bool success, string error, int code)
+        public Request(string error = "", int code = 0)
         {
-            if (content != null)
-            {
-                RawData = content;
-                if (content.ContainsKey("url"))
-                    ImageUrl = (string)content["url"];
-                else if (content.ContainsKey("data"))
-                {
-                    ImageUrl = ((string)content["data"]["response"]["url"]).Replace("/ ", "/%20");
-                }
-            }
-            Success = success;
-            ErrorCode = code;
-            ErrorMessage = error;
+            if (code == 200)
+                Success = true;
+            Code = code;
+            Error = error;
         }
-        public readonly string ImageUrl;
-        public readonly bool Success;
-        public readonly int ErrorCode;
-        public readonly string ErrorMessage;
-        public readonly dynamic RawData;
+        public string ImageUrl { get; internal set; }
+        public bool Success { get; internal set; }
+        public int Code { get; private set; }
+        public string Error{ get; private set; }
     }
 }
