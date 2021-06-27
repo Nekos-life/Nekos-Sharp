@@ -69,6 +69,8 @@ namespace NekosSharp
                 using (JsonReader reader = new JsonTextReader(text))
                 {
                     JToken Value = await JObject.ReadFromAsync(reader).ConfigureAwait(false);
+                    if ((string)Value["status"]["code"] != 200)
+                        throw new Exception("Returned JSON status code is not 200");
                     if (Usev3)
                         Request = new Request("", 200) { ImageUrl = (string)Value["data"]["response"]["url"] };
                     else
