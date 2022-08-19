@@ -4,6 +4,10 @@ A C# lib for getting cute nekos, waifus and Foxes from nekos.life
 # How to use
 Install the nuget package here https://www.nuget.org/packages/nekos-sharp
 
+# Notice!
+All nsfw content has been removed from this API and the nsfw endpoints will not work.
+This repo will be archived.
+
 Create an instance of the client
 
 ```csharp
