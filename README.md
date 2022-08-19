@@ -11,7 +11,7 @@ This repo will be archived.
 Create an instance of the client
 
 ```csharp
-public static NekosSharp.NekosClient NekoClient = new NekosClient("Bot Name Here");`
+public static NekosSharp.NekoClient NekoClient = new NekoClient("Bot Name Here");`
 ```
 
 Version 3 of nekos.life is here you can use them with
